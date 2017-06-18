@@ -22,6 +22,16 @@
 
 #ifndef ZEND_PORTABILITY_H
 #define ZEND_PORTABILITY_H
+#define ZEND_WIN32 1
+#define WIN32 1
+#define PHP_WIN32 1
+#define HAVE_SIGNAL_H 1
+#define HAVE_SETLOCALE 1
+#define _WIN64 1
+#define ZEND_WIN32_FORCE_INLINE 1
+#define ZTS 1
+#define ZEND_DEBUG 0
+#define PHP_EXPORTS 0
 /*
 如果没有定义__cplusplus， 那么当前源代码被当作C源代码处理。
 如果定义了__cplusplus，那么当前源代码被当中C++源代码处理， 并且输出__cplusplus宏被展开后的字符串。
@@ -39,22 +49,6 @@
 /*
  * general definitions
  */
-/*我自己配的定义，方便调试，PHP的不知道，好像是写在MAKEFILE里面了*/
-#define ZEND_WIN32 1
-#define WIN32 1
-#define PHP_WIN32 1
-#define HAVE_SIGNAL_H 1
-#define HAVE_SETLOCALE 1
-#define _WIN64 1
-#define ZEND_WIN32_FORCE_INLINE 1
-#define ZTS 1
-#define ZEND_DEBUG 0
-//我不知道为什么size_t怎么会是未定义状态
-//#define __SIZE_TYPE__ long unsigned int
-//typedef __SIZE_TYPE__ size_t;
-//我在这里补全了
-//#define __cplusplus 1;
-/*结束*/
 
 #ifdef ZEND_WIN32
 # include "zend_config.w32.h"
