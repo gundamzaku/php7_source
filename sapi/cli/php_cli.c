@@ -21,6 +21,7 @@
 */
 
 /* $Id$ */
+#include "config_local.h"
 #include "php.h"
 #include "php_globals.h"
 #include "php_variables.h"

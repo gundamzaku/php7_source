@@ -20,18 +20,6 @@
 
 /* $Id$ */
 
-#ifndef ZEND_PORTABILITY_H
-#define ZEND_PORTABILITY_H
-#define ZEND_WIN32 1
-#define WIN32 1
-#define PHP_WIN32 1
-#define HAVE_SIGNAL_H 1
-#define HAVE_SETLOCALE 1
-#define _WIN64 1
-#define ZEND_WIN32_FORCE_INLINE 1
-#define ZTS 1
-#define ZEND_DEBUG 0
-#define PHP_EXPORTS 0
 /*
 如果没有定义__cplusplus， 那么当前源代码被当作C源代码处理。
 如果定义了__cplusplus，那么当前源代码被当中C++源代码处理， 并且输出__cplusplus宏被展开后的字符串。
@@ -461,8 +449,6 @@ char *alloca();
 #else
 #define ZEND_VALID_SOCKET(sock) ((sock) >= 0)
 #endif
-
-#endif /* ZEND_PORTABILITY_H */
 
 /*
  * Local variables:
